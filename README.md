@@ -1,5 +1,5 @@
 # NeoVim_config
-My personal config for Vim with NVChad
+My personal config for NeoVim. The base plugins are provided by [NVChad](https://nvchad.com)
 
 ## Prerequisites
 - Install NeoVim (`0.9.0` or greater is required)
