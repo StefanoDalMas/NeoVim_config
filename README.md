@@ -25,3 +25,7 @@ The 2 below are to make LSP rust-analyzer work as I want it to:
 I've added a custom mapping for crates.   
 
 `<leader> rcu` which updates all crates in the file, so if you're in the .toml file you run it to update them all at once
+
+
+## Extras
+Modifying the `lua/core/init.lua` to personalize it, such as 4 spaces tab, incremental search and scrolloff of 8 lines
