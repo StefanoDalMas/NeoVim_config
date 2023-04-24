@@ -21,5 +21,6 @@ The 2 below are to make LSP rust-analyzer work as I want it to
 
 ## Mappings
 `<leader>` in this config is the  spacebar
-I've added a custom mapping for crates
+I've added a custom mapping for crates.   
+
 `<leader> rcu` which updates all crates in the file, so if you're in the .toml file you run it to update them all at once
