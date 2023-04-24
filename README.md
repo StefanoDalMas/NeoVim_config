@@ -9,7 +9,7 @@ My personal config for NeoVim. The base plugins are provided by [NVChad](https:/
 - Install Node(I have `20.0.0`)
 - Install Git(I have `2.40.0`)
 ## Addons
-Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've added
+Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've added\
 -[copilot.lua](https://github.com/zbirenbaum/copilot.lua) because the official Copilot.nvim is heavier and doesn't work perfectly\
 -[copilot.cmp](https://github.com/zbirenbaum/copilot-cmp) To make Copilot.lua integrated with nvim-cmp autocompletion\
   - When you launch it you have to run the `:Copilot auth` to let copilot do its magic\
