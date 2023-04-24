@@ -15,7 +15,7 @@ Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've ad
 * [copilot.cmp](https://github.com/zbirenbaum/copilot-cmp) To make Copilot.lua integrated with nvim-cmp autocompletion\
   * When you launch it you have to run the `:Copilot auth` to let copilot do its magic\
 * [crates.vim](https://github.com/Saecki/crates.nvim) to see latest versions of crates\
-The 2 below are to make LSP rust-analyzer work as I want it to:\
+The 2 below are to make LSP rust-analyzer work as I want it to:
 * [rust-tools](https://github.com/simrat39/rust-tools.nvim)
 * [rust.vim](https://github.com/rust-lang/rust.vim)
 
