@@ -67,5 +67,54 @@ local plugins ={
       },
     },
   },
+  {
+    "folke/trouble.nvim",
+    cmd = "Trouble",
+    config = function()
+      require("trouble").setup({
+                auto_open = true,
+                auto_close = true,
+            })
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies ={
+        "windwp/nvim-ts-autotag",
+    },
+    opts ={
+        ensure_installed = {
+            "vim",
+            "c",
+            "bash",
+            "lua",
+            "typescript",
+            "tsx",
+            "html",
+            "css",
+            "toml",
+        },
+        autotag = {
+            enable = true,
+        },
+    },
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+     config = function()
+         require("indent_blankline").setup({
+            space_char_blankline = " ",
+            char_highlight_list = {
+                "IndentBlanklineIndent1",
+                "IndentBlanklineIndent2",
+                "IndentBlanklineIndent3",
+                "IndentBlanklineIndent4",
+                "IndentBlanklineIndent5",
+                "IndentBlanklineIndent6",
+            },
+            })
+     end,
+  },
+
 }
 return plugins
