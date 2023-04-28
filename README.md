@@ -19,7 +19,7 @@ The 2 below are to make LSP rust-analyzer work as I want it to:
 * [rust-tools](https://github.com/simrat39/rust-tools.nvim)
 * [rust.vim](https://github.com/rust-lang/rust.vim)
 * [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) + edits in `"lua/custom/init.lua"` to make it LGBTQ+ compliant
-* [trouble.nvim](https://github.com/folke/trouble.nvim) with activation on startup
+* [trouble.nvim](https://github.com/folke/trouble.nvim) with activation on startup and pops up each time the LSP finds an error
 
 
 ## Mappings
@@ -27,8 +27,9 @@ The 2 below are to make LSP rust-analyzer work as I want it to:
 I've added a custom mapping for crates.   
 
 `<leader> rcu` which updates all crates in the file, so if you're in the .toml file you run it to update them all at once
-`<leader> tt`to toggle trouble, `<leader> tc` to close and `<leader> to`to open it
+`<leader> tt`to toggle Trouble
 
 
 ## Extras
 Modifying the `lua/core/init.lua` to personalize it, such as 4 spaces tab, incremental search and scrolloff of 8 lines
+In order to make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!
