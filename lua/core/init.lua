@@ -79,6 +79,7 @@ autocmd("FileType", {
   end,
 })
 
+
 -- reload some chadrc options on-save
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = vim.tbl_map(

@@ -72,8 +72,9 @@ local plugins ={
     cmd = "Trouble",
     config = function()
       require("trouble").setup({
-                auto_open = true,
-                auto_close = true,
+                --FUCK COMNETSEMU
+--               auto_open = true, 
+--                auto_close = true,
             })
     end,
   },
@@ -104,6 +105,7 @@ local plugins ={
      config = function()
          require("indent_blankline").setup({
             space_char_blankline = " ",
+            show_current_context_start = true,
             char_highlight_list = {
                 "IndentBlanklineIndent1",
                 "IndentBlanklineIndent2",

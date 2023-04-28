@@ -10,7 +10,6 @@ M.crates = {
     }
   }
 }
-
 M.trouble = {
     n = {
         ["<leader>tt"] = {
@@ -19,18 +18,11 @@ M.trouble = {
             end,
             "Trouble Toggle"
         },
-        ["<leader>tc"] = {
-            function()
-                require("trouble").close()
-            end,
-            "Trouble Close"
-        },
-        ["<leader>to"] = {
-            function ()
-                require("trouble").open()
-            end,
-            "Trouble Open"
-        },
+   }
+}
+M.general = {
+    n = {
+        ["<leader>s"] = {":%s/\\<<C-r><C-w>\\>/","Change all occurrencies of a word"},
     }
 }
 return M
