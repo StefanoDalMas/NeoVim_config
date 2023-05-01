@@ -24,6 +24,7 @@ Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've ad
 - [rust.vim](https://github.com/rust-lang/rust.vim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) + edits in `"lua/custom/init.lua"` to make it LGBTQ+ compliant
 - [trouble.nvim](https://github.com/folke/trouble.nvim) with activation on startup and pops up each time the LSP finds an error
+- [null.ls](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main) with a lot of linters and formatters. I've added autoformat on save.
 
 ## Mappings
 
@@ -48,6 +49,5 @@ _ `<leader> gr` goto references \* `<leader> cf` code format(Have to test it out
 ## Extras
 
 Modifying the `lua/core/init.lua` to personalize it, such as 4 spaces tab, incremental search and scrolloff of 8 lines\
-In order to make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!\
-
+In order to make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!
 I have done some extra modification to the way jump page and search works in order to keep cursor pointing to the selected item always in the middle of the screen.

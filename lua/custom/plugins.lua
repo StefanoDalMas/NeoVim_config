@@ -132,5 +132,9 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "rvmelkonian/move.vim",
+    lazy = false,
+  },
 }
 return plugins
