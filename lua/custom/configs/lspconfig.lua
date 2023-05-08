@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 
 local util = require "lspconfig/util"
 
-local servers = { "clangd", "pyright", "texlab", "move_analyzer", "bashls" }
+local servers = { "clangd", "pyright", "texlab", "move_analyzer", "bashls" ,"marksman"}
 
 -- for servers both in Mason and LSPConfig
 for _, lsp in ipairs(servers) do

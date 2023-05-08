@@ -25,3 +25,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   command = "lua vim.lsp.buf.format()",
   pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
 })
+
+vim.schedule(function()
+  require("leap").add_default_mappings()
+end)
+

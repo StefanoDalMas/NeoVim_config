@@ -24,7 +24,9 @@ Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've ad
 - [rust.vim](https://github.com/rust-lang/rust.vim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) + edits in `"lua/custom/init.lua"` to make it LGBTQ+ compliant
 - [trouble.nvim](https://github.com/folke/trouble.nvim) with activation on startup and pops up each time the LSP finds an error
-- [null.ls](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main) with a lot of linters and formatters. I've added autoformat on save.
+- [null.ls](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main) with a lot of linters and formatters. I've added autoformat on save.- [move.vim](https://github.com/modocache/move.vim) to have move language highlighting without having to add it to TreeSitter
+- [peek.nvim](https://github.com/toppair/peek.nvim) to have markdown rendering on browser as you write it
+- [leap.nvim](https://github.com/ggandor/leap.nvim) Too useful
 
 ## Mappings
 
@@ -35,6 +37,8 @@ I've added a custom mapping for crates.
 
 `<leader> rcu` which updates all crates in the file, so if you're in the .toml file you run it to update them all at once
 `<leader> tt`to toggle Trouble
+
+- `<leader> op` to Open Peek in your favourite browser
 
 `<leader> s`to change all occurrencies of a word in a file
 These one use LSP
