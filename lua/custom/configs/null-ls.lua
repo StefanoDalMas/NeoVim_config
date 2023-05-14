@@ -2,6 +2,8 @@ local null_ls = require "null-ls"
 
 local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
+local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
   formatting.prettier,
@@ -20,8 +22,12 @@ local sources = {
   lint.shellcheck,
   lint.djlint,
   lint.cpplint,
-  lint.vale,
   lint.pylint.with { extra_args = { "--errors-only" } },
+  lint.vale,
+
+  code_actions.proselint,
+
+  diagnostics.proselint,
 }
 
 null_ls.setup {
