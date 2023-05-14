@@ -7,14 +7,21 @@ local sources = {
   formatting.prettier,
   formatting.stylua,
   formatting.black,
-  formatting.clang_format,
+  formatting.clang_format.with {
+    extra_args = {
+      "-style={IndentWidth: 4, UseTab: Never}",
+      "-assume-filename",
+      vim.api.nvim_buf_get_name(0),
+    },
+  },
   formatting.djlint,
+  formatting.beautysh,
 
   lint.shellcheck,
   lint.djlint,
   lint.cpplint,
-  --lint.vale,
-  lint.pylint,
+  lint.vale,
+  lint.pylint.with { extra_args = { "--errors-only" } },
 }
 
 null_ls.setup {

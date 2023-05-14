@@ -147,6 +147,10 @@ local plugins = {
   },
   { 
     "ggandor/leap.nvim",
-  }
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+    lazy=false,
+  },
 }
 return plugins

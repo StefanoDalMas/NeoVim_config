@@ -15,12 +15,11 @@ opt.showmode = false
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
-
 -- Cooler search
 opt.hlsearch = false
 opt.incsearch = true
 
---scrolloff and signcolumn 
+--scrolloff and signcolumn
 opt.scrolloff = 6
 
 -- Indenting
@@ -79,7 +78,6 @@ autocmd("FileType", {
   end,
 })
 
-
 -- reload some chadrc options on-save
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = vim.tbl_map(
@@ -117,5 +115,3 @@ local new_cmd = vim.api.nvim_create_user_command
 new_cmd("NvChadUpdate", function()
   require "nvchad.update"()
 end, {})
-
-

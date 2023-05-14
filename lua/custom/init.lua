@@ -23,10 +23,13 @@ vim.opt.listchars:append "space:⋅"
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   command = "lua vim.lsp.buf.format()",
-  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
+  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.ts,*.tsx,*.yaml,*.c,*.dart",
 })
 
+--get leap running
 vim.schedule(function()
   require("leap").add_default_mappings()
 end)
 
+--set relative line number
+vim.cmd("set rnu")
