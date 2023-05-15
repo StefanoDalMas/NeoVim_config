@@ -5,7 +5,8 @@ My personal config for NeoVim. The base plugins are provided by [NVChad](https:/
 ## Prerequisites
 
 - Install NeoVim (`0.9.0` or greater is required)
-- A good idea is to `alias vi=nvim` and `alias vim=nvim`to avoid opening the boring one
+- A good idea is to `alias vi=nvim` and `alias vim=nvim`to avoid opening the boring once
+  - Note that now I'm also using [neovide](https://neovide.dev), so my alias at the moment is `alias vi/nvim =neovide --multigrid --noidle`
 - Install and setup both a [NerdFont](https://www.nerdfonts.com) such as `JetBrains Mono Font` and a `Symbol Font`
   - When installing it avoid using the one ending with `Mono`, so select for example `JetBrainsMono Nerd Font` and not `JetBrainsMono Nerd Font Mono` to avoid having small icons
 - Install Node(I have `20.0.0`)
