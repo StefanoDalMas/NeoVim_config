@@ -136,21 +136,22 @@ local plugins = {
     "rvmelkonian/move.vim",
     lazy = false,
   },
-  {    "toppair/peek.nvim",
-        lazy = false,
-        build = "deno task --quiet build:fast",
-        config = function()
-            require('peek').setup{
-                app = 'browser',
-            }
-        end,
+  {
+    "toppair/peek.nvim",
+    lazy = false,
+    build = "deno task --quiet build:fast",
+    config = function()
+      require("peek").setup {
+        app = "browser",
+      }
+    end,
   },
-  { 
+  {
     "ggandor/leap.nvim",
   },
   {
     "ThePrimeagen/vim-be-good",
-    lazy=false,
+    lazy = false,
   },
 }
 return plugins
