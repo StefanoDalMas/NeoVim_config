@@ -1,3 +1,4 @@
+local opt = vim.opt
 -- whacky way to initialize trouble.nvim so that it's active on startup
 vim.schedule(function()
   require("trouble").open()
@@ -34,21 +35,23 @@ end)
 --set relative line number
 vim.cmd "set rnu"
 
---neovide stuff like command c v
+-- Cooler search
+opt.hlsearch = false
+opt.incsearch = true
 
-if vim.g.neovide then
-  vim.g.neovide_input_use_logo = 1 -- enable use of the logo (cmd) key
-  vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
-  vim.keymap.set("v", "<D-c>", '"+y') -- Copy
-  vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
-  vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
-  vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
-  vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
-end
+--scrolloff and signcolumn
+opt.scrolloff = 6
 
--- Allow clipboard copy paste in neovim
-vim.g.neovide_input_use_logo = 1
-vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<D-v>", "<C-R>+", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+-- Indenting
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.smartindent = true
+opt.tabstop = 4
+opt.softtabstop = 4
+
+-------------------------------------- format on save ------------------------------------------
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  command = "lua vim.lsp.buf.format()",
+  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
+})
