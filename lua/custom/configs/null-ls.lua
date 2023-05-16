@@ -7,7 +7,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
   formatting.prettier,
-  formatting.stylua,
+  formatting.stylua.with { extra_args = { "--config-path", vim.fn.expand "~/.config/nvim/.stylua.toml" } },
   formatting.black,
   formatting.clang_format.with {
     extra_args = {

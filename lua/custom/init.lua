@@ -1,10 +1,10 @@
 local opt = vim.opt
 -- whacky way to initialize trouble.nvim so that it's active on startup
 vim.schedule(function()
-  require("trouble").open()
+    require("trouble").open()
 end)
 vim.schedule(function()
-  require("trouble").close()
+    require("trouble").close()
 end)
 
 --indent-blankline.nvim custom colors
@@ -23,13 +23,13 @@ vim.opt.listchars:append "space:⋅"
 -------------------------------------- format on save ------------------------------------------
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-  command = "lua vim.lsp.buf.format()",
-  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.ts,*.tsx,*.yaml,*.c,*.dart",
+    command = "lua vim.lsp.buf.format()",
+    pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.ts,*.tsx,*.yaml,*.c,*.dart",
 })
 
 --get leap running
 vim.schedule(function()
-  require("leap").add_default_mappings()
+    require("leap").add_default_mappings()
 end)
 
 --set relative line number
@@ -52,6 +52,15 @@ opt.softtabstop = 4
 -------------------------------------- format on save ------------------------------------------
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-  command = "lua vim.lsp.buf.format()",
-  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
+    command = "lua vim.lsp.buf.format()",
+    pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
 })
+
+---VimTex config---
+
+vim.cmd [[
+    filetype plugin indent on
+    syntax enable
+    let g:vimtex_view_method = 'skim'
+    let maplocalleader = ","
+]]

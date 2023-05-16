@@ -5,12 +5,13 @@ My personal config for NeoVim. The base plugins are provided by [NVChad](https:/
 ## Prerequisites
 
 - Install NeoVim (`0.9.0` or greater is required)
-- A good idea is to `alias vi=nvim` and `alias vim=nvim`to avoid opening the boring once
-  - Note that now I'm also using [neovide](https://neovide.dev), so my alias at the moment is `alias vi/nvim =neovide --multigrid --noidle`
+- A good idea is to `alias vi=nvim` and `alias vim=nvim`to avoid opening the boring one
 - Install and setup both a [NerdFont](https://www.nerdfonts.com) such as `JetBrains Mono Font` and a `Symbol Font`
   - When installing it avoid using the one ending with `Mono`, so select for example `JetBrainsMono Nerd Font` and not `JetBrainsMono Nerd Font Mono` to avoid having small icons
 - Install Node(I have `20.0.0`)
 - Install Git(I have `2.40.0`)
+- Have Latex Compiler if you want to use `VimTex`. The compiler needed for the backend is latexmk.
+  - If you want to use it you're going to need a PDF Viewer. I'm on MacOS so I use [Skim](https://skim-app.sourceforge.io)
 
 ## Addons
 
@@ -27,7 +28,8 @@ Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've ad
 - [trouble.nvim](https://github.com/folke/trouble.nvim) with activation on startup and pops up each time the LSP finds an error
 - [null.ls](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main) with a lot of linters and formatters. I've added autoformat on save.- [move.vim](https://github.com/modocache/move.vim) to have move language highlighting without having to add it to TreeSitter
 - [peek.nvim](https://github.com/toppair/peek.nvim) to have markdown rendering on browser as you write it
-- [leap.nvim](https://github.com/ggandor/leap.nvim) Too useful
+- [leap.nvim](https://github.com/ggandor/leap.nvim) Too useful for cursor movement
+- [VimTex](https://github.com/lervag/vimtex) to write LaTex
 
 ## Mappings
 
