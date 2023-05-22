@@ -18,6 +18,7 @@ local sources = {
     },
     formatting.djlint,
     formatting.beautysh,
+    formatting.latexindent,
 
     lint.shellcheck,
     lint.djlint,

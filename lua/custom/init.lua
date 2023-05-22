@@ -24,7 +24,7 @@ vim.opt.listchars:append "space:⋅"
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     command = "lua vim.lsp.buf.format()",
-    pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.ts,*.tsx,*.yaml,*.c,*.dart",
+    pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.ts,*.tsx,*.yaml,*.c,*.dart,*.tex",
 })
 
 --get leap running
@@ -51,16 +51,12 @@ opt.softtabstop = 4
 
 -------------------------------------- format on save ------------------------------------------
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-    command = "lua vim.lsp.buf.format()",
-    pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.c,*.dart",
-})
-
 ---VimTex config---
 
 vim.cmd [[
     filetype plugin indent on
     syntax enable
     let g:vimtex_view_method = 'skim'
-    let maplocalleader = ","
+    let maplocalleader = " "
 ]]
+vim.g.vimtex_syntax_enabled = 0 --idk if needed--
