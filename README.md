@@ -1,6 +1,6 @@
 # NeoVim_config
 
-My personal config for NeoVim. The base plugins are in [NVChad](https://nvchad.com)
+My personal config for NeoVim. The base plugins are from [NVChad](https://nvchad.com)
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ My personal config for NeoVim. The base plugins are in [NVChad](https://nvchad.c
 
 Apart from NVChad's base plugins such as Telescope, TreeSitter and so on I've added\
 
--   [copilot.lua](https://github.com/zbirenbaum/copilot.lua) because the official Copilot.nvim is heavier and doesn't always work properly.
+-   [copilot.lua](https://github.com/zbirenbaum/copilot.lua) because the official Copilot.nvim is heavier and doesn't always work properly
 -   [copilot.cmp](https://github.com/zbirenbaum/copilot-cmp) To make Copilot.lua integrated with nvim-cmp autocompletion
     -   When you launch it you have to run the `:Copilot auth` to let copilot do its magic
 -   [crates.vim](https://github.com/Saecki/crates.nvim) to see latest versions of crates\
@@ -56,5 +56,8 @@ _ `<leader> gr` goto references \* `<leader> cf` code format(Have to test it out
 ## Extras
 
 Modifying the `lua/core/init.lua` to personalize it, such as 4 spaces tab, incremental search and scrolloff of 8 lines\
-To make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!
+
+-   To make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!
+-   To make `lemminx` work (LSP for XML files), you are going to need to download it. The easiest way is to download the binary and add it to your `$PATH`.
+
 I have done some extra modification to the way jump page and search works to keep cursor pointing to the selected item always in the middle of the screen.
