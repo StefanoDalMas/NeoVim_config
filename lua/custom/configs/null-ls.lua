@@ -6,7 +6,7 @@ local code_actions = null_ls.builtins.code_actions
 local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
-    formatting.prettier,
+    formatting.prettier.with{extra_args={ "--tab-width", "4" }},
     formatting.stylua.with { extra_args = { "--config-path", vim.fn.expand "~/.config/nvim/.stylua.toml" } },
     formatting.black,
     formatting.clang_format.with {
@@ -25,10 +25,12 @@ local sources = {
     lint.cpplint,
     lint.pylint.with { extra_args = { "--errors-only" } },
     lint.vale,
+    lint.eslint,
 
     code_actions.proselint,
 
     diagnostics.proselint,
+    diagnostics.write_good,
 }
 
 null_ls.setup {
