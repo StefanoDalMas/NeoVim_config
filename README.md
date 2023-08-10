@@ -58,3 +58,8 @@ _ `<leader> gr` goto references \* `<leader> cf` code format(Have to test it out
 Modifying the `lua/core/init.lua` to personalize it, such as 4 spaces tab, incremental search and scrolloff of 8 lines\
 In order to make `live_grep` work with Telescope (`<leader>fw` as defined in the cheatsheet) you are going to need [ripgrep](https://github.com/BurntSushi/ripgrep)!
 I have done some extra modification to the way jump page and search works in order to keep cursor pointing to the selected item always in the middle of the screen.
+
+
+### TMP
+Remember to add { name = "copilot"} to lua/plugins/custom/cmp.lua :)
+
